@@ -58,7 +58,7 @@ Luồng demo:
     scripts/evaluate.py             đánh giá trên validation và test
     scripts/infer.py                demo video/webcam
     scripts/cross_dataset_eval.py   đánh giá tùy chọn trên bộ dữ liệu khác
-    outputs/                        manifest, checkpoint, log và metrics (không đưa lên Git)
+    outputs/                        artifacts sinh khi chạy; chỉ metrics và log train đã rà soát được công khai
     RWF-2000/                       video dữ liệu (không đưa lên Git)
 
 ## 4. Công nghệ và công cụ
@@ -308,7 +308,7 @@ Kiểm tra đường dẫn trong dấu ngoặc kép, thử file AVI/MP4 khác, v
 
 ## 16. Trước khi đẩy dự án lên GitHub
 
-Repo đã loại các mục lớn hoặc nhạy cảm khỏi Git bằng .gitignore, gồm .venv/, .env, RWF-2000/, outputs/, checkpoint .pt/.pth và video .avi/.mp4.
+Repo loại .venv/, .env, RWF-2000/, checkpoint .pt/.pth và video .avi/.mp4. outputs/ bị ignore mặc định; riêng outputs/eval_metrics.json và outputs/logs/train_log.csv được đưa lên sau khi rà soát vì chỉ chứa chỉ số và log epoch. Manifest split_manifest.json, log có đường dẫn video/cảnh báo, snapshots và checkpoint vẫn để local.
 
 - Không ép add dữ liệu, video, checkpoint hoặc bí mật vào Git.
 - Chỉ đăng mã nguồn, cấu hình không chứa bí mật và tài liệu.
